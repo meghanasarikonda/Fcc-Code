@@ -208,19 +208,47 @@ function slasher(arr, howMany) {
 
 console.log(slasher([1, 2, 3], 2))
 
-// ===========
+// destroyer
 
 
-function destroyer(arr) {
-  var removalElements = arguments
-  return removalElements[0].filter(elementsAfterDestroying)
-  function elementsAfterDestroying(values) {
-    	//return values != removalElements[1] && values !=removalElements[2]
-  	return values != removalElements(filtered)
-  	function filtered(filterValues) {
-  		return filterValues
-  	}
+function minidestroyer(arr0, val) {
+  var arr2 = []
+  var j
+  for (j = 0; j < arr0.length; j++) {
+    if (arr0[j] !== val) {
+      arr2.push(arr0[j])
+    }
   }
+  return arr2
+}
+
+function destroyer(arr0, ...arr1) {
+  var i
+  var arr3 = arr0
+  for (i = 0; i < arr1.length; i++) {
+    arr3 = minidestroyer(arr3, arr1[i])
+  }
+  return arr3
 }
 
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+
+
+// Repeat a string
+
+function repeatStringNumTimes(str, num) {
+  var i
+  var strReplace = []
+  if (num < 0) {
+    return ''
+  }
+  for (i = 0; i < num; i++) {
+    strReplace.push(str)
+  }
+  return strReplace.join('')
+}
+
+console.log(repeatStringNumTimes('abc', -2))
+
+
+

@@ -87,28 +87,8 @@ console.log(largestOfFourRevised([[4, 5, 1, 3], [13, 27, 1800, 26], [32, 35, 37,
 
 function confirmEnding(str, target) {
   return str.slice(-target.length) === target
-  }
+}
 
 console.log(confirmEnding('Bastian', 'n'))
 
-// Repeat a string
 
-function repeatStringNumTimes(str, num) {
-  // repeat after me
-  var i
-  var strReplace = []
-  if (num < 0) {
-    return ''
-  }
-  for (i = 0; i < num; i++) {
-    strReplace.push(str)
-  }
-  return strReplace.join('')
-}
-
-console.log(repeatStringNumTimes('abc', -2))
-
-
-function repeatStringNumTimesRevised(str, target) {
-
-}
