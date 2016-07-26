@@ -250,5 +250,31 @@ function repeatStringNumTimes(str, num) {
 
 console.log(repeatStringNumTimes('abc', -2))
 
+// where do i belong
+
+function getIndexToIns(arr, num) {
+  var i
+  // var sortValues = (a, b) => {
+  //   (a - b)
+  // }
+  // arr.sort(sortValues)
+  var sortedArray = [].concat(arr).sort((a, b) => a - b) // here right, okay
+
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) {
+      return (i)
+    }
+  }
+  return i
+}
+
+console.log(getIndexToIns([2, 5, 10], 15))
 
 
+function (a, b) {
+  return a - b
+}
+
+(a, b) => {
+  return a - b
+}

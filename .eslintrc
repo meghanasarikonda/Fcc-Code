@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "strict": [2, "never"],
+    "comma-dangle": [0, "never"],
+    "semi": [2, "never"],
+    "id-length": [0],
+    "no-undef": [2],
+    "func-names": [0],
+    "no-fallthrough": "error",
+    "new-cap": 0,
+    "no-console": 0,
+    "no-unused-vars": 0,
+    "no-var": 0,
+    "no-multiple-empty-lines": 0,
+    "object-shorthand": 0,
+    "no-use-before-define": 0
+  }
+}
