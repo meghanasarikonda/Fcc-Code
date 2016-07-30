@@ -290,3 +290,15 @@ function rot13(string) {
 
 console.log(rot13('GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.'))
 
+// Sum All Numbers in a Range
+
+function sumAll(arr) {
+  var sum = 0
+  var i
+  for (i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    sum += i
+  }
+  return sum
+}
+
+console.log(sumAll([10, 5]))
