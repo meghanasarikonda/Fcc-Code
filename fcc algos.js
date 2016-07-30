@@ -271,10 +271,22 @@ function getIndexToIns(arr, num) {
 console.log(getIndexToIns([2, 5, 10], 15))
 
 
-function (a, b) {
-  return a - b
+// caesars cipher
+
+function rot13(string) {
+  var arrOfDecodedVal = []
+  var i
+  for (i = 0; i < string.length; i++) {
+    if (string.charCodeAt(i) > 77 && string.charCodeAt(i) <= 90) {
+      arrOfDecodedVal.push(string.charCodeAt(i) - 13)
+    } else if (string.charCodeAt(i) < 78 && string.charCodeAt(i) > 64) {
+      arrOfDecodedVal.push(string.charCodeAt(i) + 13)
+    } else {
+      arrOfDecodedVal.push(string.charCodeAt(i))
+    }
+  }
+  return String.fromCharCode(...arrOfDecodedVal)
 }
 
-(a, b) => {
-  return a - b
-}
+console.log(rot13('GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.'))
+
